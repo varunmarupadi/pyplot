@@ -36,6 +36,8 @@ for i in range(1, dateOrd[-1]-dateOrd[0] + 1):
   print "%s\t%.2f\t%.2f\t\t%.2f" % (datetime.date.fromordinal(dateOrd[0]+i).strftime("%Y-%m-%d"),  f(dateOrd[0] + i), moving_avg[-1],  diffs[-1])
 
 print "Average diff: %.2f" % (sum(diffs)/len(diffs))
+#for i in range(1,len(diffs)):
+#  print sum(diffs[:i+1])/i
 
 plt.subplots(1)[0].autofmt_xdate()
 plt.axis((datetime.date.fromordinal(dateOrd[0] - 3), datetime.date.fromordinal(dateOrd[-1] + 3), 170, 205));
